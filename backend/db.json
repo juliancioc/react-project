@@ -1,40 +1,16 @@
 {
   "books": [
     {
-      "id": 1,
-      "title": "The Pragmatic Programmer",
-      "price": "90",
-      "author": "Andrew Hunt & David Thomas"
+      "title": "c",
+      "author": "c",
+      "link": "c",
+      "id": 74
     },
     {
-      "id": 2,
-      "title": "The Clean Coder",
-      "price": "79",
-      "author": "Robert C. Martin"
-    },
-    {
-      "id": 3,
-      "title": "Clean Code",
-      "price": "129",
-      "author": "Robert C. Martin"
-    },
-    {
-      "id": 4,
-      "title": "Clean Architecture",
-      "price": "84",
-      "author": "Robert C. Martin"
-    },
-    {
-      "id": 5,
-      "title": "Code Complete",
-      "price": "59",
-      "author": "Steve McConnell"
-    },
-    {
-      "id": 6,
-      "title": "Eloquent JavaScript",
-      "price": "119",
-      "author": "Marjin Haverbeke"
+      "title": "d",
+      "author": "d",
+      "link": "d",
+      "id": 37
     }
   ]
 }

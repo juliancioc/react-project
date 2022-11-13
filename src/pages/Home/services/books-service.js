@@ -5,3 +5,9 @@ export const getBooks = async () => {
 
   return data;
 };
+
+export const removeBook = async (id) => {
+  const { data } = await api.delete(`books/${id}`);
+
+  return data;
+};

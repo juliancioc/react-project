@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import { getBooks } from '../pages/Home/services/books-service';
+
+import { getBooks, removeBook } from '../pages/Home/services/books-service';
+import { addBook } from '../pages/NewBook/services/new-book-service';
 
 const BooksContext = createContext({});
 
@@ -16,8 +18,21 @@ export const BooksProvider = ({ children }) => {
     setBooks(data);
   };
 
+  const createNewBook = async (book) => {
+    await addBook(book);
+  };
+
+  const deleteBook = async (id) => {
+    await removeBook(id);
+
+    setBooks(books.filter((b) => b.id !== id));
+  };
+
   const contextValues = {
-    books
+    books,
+    createNewBook,
+    listBooks,
+    deleteBook
   };
 
   return (
@@ -27,4 +42,4 @@ export const BooksProvider = ({ children }) => {
   );
 };
 
-export const useBooks = () => useContext(BooksContext)
+export const useBooks = () => useContext(BooksContext);
